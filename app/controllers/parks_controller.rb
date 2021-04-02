@@ -28,7 +28,7 @@ class ParksController < ApplicationController
     if state.id == @park.state_id
       json_response(@park)
     else
-      render status: 404, json{ message: "This park is not in this state."}
+      render status: 404, json: { message: "This park is not in this state." }
     end
   end
 
@@ -61,10 +61,10 @@ class ParksController < ApplicationController
     @park = Park.find(params[:id])
     if state.id == @park.state_id
       if @park.update!(park_params)
-        render status: 200, json: { message: "This park has been successfully updated."}
+        render status: 200, json: { message: "This park has been successfully updated." }
       end
     else
-      render status: 404, json{ message: "This park is not in this state."}
+      render status: 404, json: { message: "This park is not in this state."} 
     end
   end
 
@@ -82,10 +82,10 @@ class ParksController < ApplicationController
     @park = Park.find(params[:id])
     if state.id == @park.state_id
       if @park.destroy!
-        render status: 200, json: { message: "This park has been destroyed by a laser from space."}
+        render status: 200, json: { message: "This park has been destroyed by a laser from space." }
       end
     else
-      render status: 404, json{ message: "This park is not in this state."}
+      render status: 404, json: { message: "This park is not in this state." }
     end
   end
 

@@ -14,6 +14,7 @@
 * Faker
 * FactoryBot
 * Swagger-docs
+* Swagger UI
 
 ## Description
 This project is an API with Faker generated data. It has full CRUD functionality for the nested routes of states and parks. Routes are detailed below.
@@ -31,10 +32,11 @@ Follow the subsequent instructions to work from Git Hub:
   * $ rake swagger:docs
 
 * To create a local server: $ rails s
-* To check the routes download Postman
+  * This will create a server on http://localhost:3000
+* Navigate to the server in a browser to utilize Swagger UI for clear API routing
 * To run any testing: $ rspec   
 
-## Routes
+## Routes   
 
 ![Routes](/state_parks_routes.PNG)
 
