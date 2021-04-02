@@ -22,9 +22,9 @@ class StatesController < ApplicationController
   end
 
   def destroy
-    @state = Review.find(params[:id])
+    @state = State.find(params[:id])
     if @state.destroy!
-      render status: 200, json: { message: "This state has been successfully removed off the face of the planet."}
+      render status: 200, json: { message: "This state and all its parks have been successfully removed off the face of the planet."}
     end
   end
 
