@@ -13,7 +13,7 @@ class ParksController < ApplicationController
 
   def create
     @park = Park.create!(park_params)
-    json_response(@park)
+    json_response(@park, :created)
   end
 
   def update
