@@ -1,4 +1,4 @@
-class StatessController < ApplicationController
+class StatesController < ApplicationController
   def index
     @states = State.all
     json_response(@states)
@@ -24,7 +24,7 @@ class StatessController < ApplicationController
   def destroy
     @state = Review.find(params[:id])
     if @state.destroy!
-      render status: 200, json: { message "This state has been successfully removed off the face of the planet."}
+      render status: 200, json: { message: "This state has been successfully removed off the face of the planet."}
     end
   end
 
