@@ -25,7 +25,11 @@ class ParksController < ApplicationController
   def show
     state = State.find(params[:state_id])
     @park = Park.find(params[:id])
-    json_response(@park)
+    if state.id == @park.state_id
+      json_response(@park)
+    else
+      render status: 404, json{ message: "This park is not in this state."}
+    end
   end
 
   
@@ -53,9 +57,14 @@ class ParksController < ApplicationController
     response :unprocessable_entity
   end
   def update
+    state = State.find(params[:state_id])
     @park = Park.find(params[:id])
-    if @park.update!(park_params)
-      render status: 200, json: { message: "This park has been successfully updated."}
+    if state.id == @park.state_id
+      if @park.update!(park_params)
+        render status: 200, json: { message: "This park has been successfully updated."}
+      end
+    else
+      render status: 404, json{ message: "This park is not in this state."}
     end
   end
 
@@ -69,9 +78,14 @@ class ParksController < ApplicationController
     response :unprocessable_entity
   end
   def destroy
+    state = State.find(params[:state_id])
     @park = Park.find(params[:id])
-    if @park.destroy!
-      render status: 200, json: { message: "This park has been destroyed by a laser from space."}
+    if state.id == @park.state_id
+      if @park.destroy!
+        render status: 200, json: { message: "This park has been destroyed by a laser from space."}
+      end
+    else
+      render status: 404, json{ message: "This park is not in this state."}
     end
   end
 

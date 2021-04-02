@@ -13,6 +13,7 @@
 * PostgreSQL
 * Faker
 * FactoryBot
+* Swagger-docs
 
 ## Description
 This project is an API with Faker generated data. It has full CRUD functionality for the nested routes of states and parks. Routes are detailed below.
@@ -24,14 +25,18 @@ Follow the subsequent instructions to work from Git Hub:
 * Clone repository from Github
 * Navigate to the top level of the project directory
 * To create the Gemfile.lock: $ bundle install
-* In order to recreate the databases, enter the following command in your terminal:
+* In order to recreate, seed, and set up the API documentation, run the following commands in your terminal:
   * $ rake db:setup
+  * $ rake db:seed
+  * $ rake swagger:docs
+
 * To create a local server: $ rails s
 * To check the routes download Postman
 * To run any testing: $ rspec   
 
 ## Routes
 
+![Routes](/state_parks_routes.PNG)
 
 ## Git Hub link:
 
