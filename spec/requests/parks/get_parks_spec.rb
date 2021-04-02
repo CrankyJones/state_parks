@@ -1,14 +1,16 @@
 require 'rails_helper'
 
 describe "get all parks route", :type => :request do
+
+  before do
   state = FactoryBot.create(:state)
   park = Park.create({
     name: "Way Up There",
     description: "It's pretty high.",
     state_id: state.id
     })
-
-  before { get "/states/#{state.id}/parks"}
+  get "/states/#{state.id}/parks"
+  end
 
   it 'returns all parks belonging to that state' do
     expect(JSON.parse(response.body).size).to eq(1)
