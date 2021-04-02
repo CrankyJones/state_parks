@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "get all states route", :type => :request do
+describe "update states route", :type => :request do
   
   before do
     @state = FactoryBot.create(:state)
