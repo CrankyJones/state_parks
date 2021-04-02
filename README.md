@@ -1,24 +1,53 @@
-# README
+# State Parks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### An API project that holds states and associated parks(Fake parks; named after mountains).
 
-Things you may want to cover:
+#### By Geof Rosenmund
 
-* Ruby version
+## Technologies Used
 
-* System dependencies
+* Ruby
+* Rails
+* RSPEC
+* Pry 
+* PostgreSQL
+* Faker
+* FactoryBot
 
-* Configuration
+## Description
+This project is an API with Faker generated data. It has full CRUD functionality for the nested routes of states and parks. Routes are detailed below.
 
-* Database creation
+## Setup/Installation Requirements
 
-* Database initialization
+Follow the subsequent instructions to work from Git Hub:
 
-* How to run the test suite
+* Clone repository from Github
+* Navigate to the top level of the project directory
+* To create the Gemfile.lock: $ bundle install
+* In order to recreate the databases, enter the following command in your terminal:
+  * $ rake db:setup
+* To create a local server: $ rails s
+* To check the routes download Postman
+* To run any testing: $ rspec   
 
-* Services (job queues, cache servers, search engines, etc.)
+## Routes
 
-* Deployment instructions
 
-* ...
+## Git Hub link:
+
+https://github.com/CrankyJones/state_parks
+
+## Database Layout:
+
+![Database Layout](/state_parks_schema.PNG)
+
+## Known Bugs:
+
+* There are no known bugs at this time.
+
+## **License**
+[MIT](https://opensource.org/licenses/MIT)
+Copyright (c) [2021] [Geof Rosenmund]
+
+## **Contact Information**
+Geof Rosenmund (geof.rosenmunds.email@gmail.com)

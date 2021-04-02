@@ -1,0 +1,15 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+
+  ],
+  "authorizations": null,
+  "info": {
+    "title": "State Parks API",
+    "description": "States with associated parks.",
+    "contact": "geof.rosenmunds.email@gmail.com",
+    "license": "MIT"
+  }
+}
