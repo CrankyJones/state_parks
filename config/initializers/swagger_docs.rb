@@ -1,3 +1,4 @@
+Swagger::Docs::Config.base_api_controller = ActionController::API
 Swagger::Docs::Config.register_apis({
   "1.0" => {
     # the extension used for the API
@@ -7,7 +8,7 @@ Swagger::Docs::Config.register_apis({
     # the URL base path to your API
     :base_path => "http://localhost:3000",
     # if you want to delete all .json files at each generation
-    :clean_directory => false,
+    :clean_directory => true,
     # Ability to setup base controller for each api version. Api::V1::SomeController for example.
     :base_api_controller => ActionController::API,
     :parent_controller => ApplicationController,
@@ -15,9 +16,11 @@ Swagger::Docs::Config.register_apis({
     :attributes => {
       :info => {
         "title" => "State Parks API",
-        "description" => "States with associated parks.",
-        "contact" => "geof.rosenmunds.email@gmail.com",
-        "license" => "MIT",
+        "description" => "Get and post reviews for travel destinations.",
+        "termsOfServiceUrl" => "http://helloreverb.com/terms/",
+        "contact" => "apiteam@wordnik.com",
+        "license" => "Apache 2.0",
+        "licenseUrl" => "http://www.apache.org/licenses/LICENSE-2.0.html"
       }
     }
   }

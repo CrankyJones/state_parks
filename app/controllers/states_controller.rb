@@ -21,7 +21,7 @@ class StatesController < ApplicationController
     response :unprocessable_entity
   end
   def show
-    state = State.find(params[:id])
+    @state = State.find(params[:id])
     json_response(@state)
   end
 
